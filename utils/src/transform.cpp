@@ -2,10 +2,10 @@
 #include <string>
 #include <opencv2/opencv.hpp>
 #include <boost/python.hpp>
-#include <boost/numpy.hpp>
+#include <boost/python/numpy.hpp>
 
 namespace py = boost::python;
-namespace np = boost::numpy;
+namespace np = boost::python::numpy;
 
 cv::Mat transform(
   const cv::Mat& img,

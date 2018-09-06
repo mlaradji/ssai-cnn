@@ -24,3 +24,7 @@ results
 *.cmake
 *.dylib
 *.npy
+
+# Added by ML
+
+git_push.sh

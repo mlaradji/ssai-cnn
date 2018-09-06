@@ -1,9 +1,9 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
 #include <boost/python.hpp>
-#include <boost/numpy.hpp>
+#include <boost/python/numpy.hpp>
 
-namespace np = boost::numpy;
+namespace np = boost::python::numpy;
 
 int relax_precision(const np::ndarray& predict,
                     const np::ndarray& label, const int& relax) {

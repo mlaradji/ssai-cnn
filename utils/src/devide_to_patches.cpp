@@ -2,10 +2,10 @@
 #include <iostream>
 #include <tuple>
 #include <boost/python.hpp>
-#include <boost/numpy.hpp>
+#include <boost/python/numpy.hpp>
 
 namespace py = boost::python;
-namespace np = boost::numpy;
+namespace np = boost::python::numpy;
 
 cv::Mat convert_to_cvmat(const np::ndarray& img) {
   const long *shape   = img.get_shape();

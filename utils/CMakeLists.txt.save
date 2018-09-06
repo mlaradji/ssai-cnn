@@ -10,7 +10,7 @@ find_package(PythonLibs REQUIRED)
 set(inc_dirs
   ${CMAKE_CURRENT_SOURCE_DIR}
   ${OpenCV_INCLUDE_DIRS}
-  ${Boost_INCLUDE_DIRS}
+  ${BOOST_INCLUDE_DIRS}
   ${Boost_NumPy_INCLUDE_DIR}
   ${PYTHON_INCLUDE_DIRS}
 )
@@ -18,7 +18,7 @@ set(inc_dirs
 set(lib_dirs
   ${TBB_LIBRARY_DIRS}
   ${Boost_NumPy_LIBRARY_DIR}
-  ${BOOST_LIBRARY_DIR}
+  ${Boost_LIBRARY_DIRS}
 )
 
 set(libs
