@@ -34,7 +34,7 @@ $ bash build.sh
 ## Create Dataset
 
 ```
-$ bash shells/download.sh
+$ bash shells/downloads.sh
 $ bash shells/create_dataset.sh
 ```
 
