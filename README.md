@@ -16,6 +16,11 @@ It is recommended to install anaconda with python 3.6.5. Using `conda install`, 
 - lmdb 0.9.22
 - Boost 1.67.0 (Boost.NumPy is no longer a separate package from Boost.)
 
+To install in one go, use
+```
+conda install 
+```
+
 Note that some of the packages are from the conda-forge repository, which might need to be added.
 
 # Set-up

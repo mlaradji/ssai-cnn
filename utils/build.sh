@@ -1,6 +1,7 @@
 ./reset_cmake.sh
 
-PYTHON_DIR=/opt/anaconda3
+source ../config/python
+PYTHON_DIR=$conda_dir
 
 cmake \
 -DPYTHON_LIBRARY=$PYTHON_DIR/lib/libpython3.6m.so \
