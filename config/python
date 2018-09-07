@@ -1,1 +1,2 @@
 conda_dir=/opt/anaconda3
+SSAI_HOME=/home/pycuda/projects/ssai-cnn
