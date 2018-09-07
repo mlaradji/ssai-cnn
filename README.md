@@ -8,13 +8,13 @@ This is an implementation of [Volodymyr Mnih's dissertation](https://www.cs.toro
 # Requirements
 
 It is recommended to install anaconda with python 3.6.5. Using `conda install`, install the following packages:
-  - Chainer 1.5.0.2
-  - Cython 0.28.2
-  - NumPy 1.14.3
-  - tqdm
-  - OpenCV 3.4.2
-  - lmdb 0.9.22
-  - Boost 1.67.0 (Boost.NumPy is no longer a separate package from Boost.)
+- Chainer 1.5.0.2
+- Cython 0.28.2
+- NumPy 1.14.3
+- tqdm
+- OpenCV 3.4.2
+- lmdb 0.9.22
+- Boost 1.67.0 (Boost.NumPy is no longer a separate package from Boost.)
 
 Note that some of the packages are from the conda-forge repository, which might need to be added.
 
