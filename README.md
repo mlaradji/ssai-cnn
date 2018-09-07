@@ -1,54 +1,24 @@
+This project was forked from [mitmul: ssai-cnn](https://github.com/mitmul/ssai-cnn).
 This is an implementation of [Volodymyr Mnih's dissertation](https://www.cs.toronto.edu/~vmnih/docs/Mnih_Volodymyr_PhD_Thesis.pdf) methods on his [Massachusetts road & building dataset](https://www.cs.toronto.edu/~vmnih/data/) and my original methods that are published in [this paper](http://www.ingentaconnect.com/content/ist/jist/2016/00000060/00000001/art00003).
+
+# Differences
+
+- The requirements have been updated.
 
 # Requirements
 
-- Python 3.5 (anaconda with python 3.5.1 is recommended)
-  - Chainer 1.5.0.2
-  - Cython 0.23.4
-  - NumPy 1.10.1
-  - tqdm
-- OpenCV 3.0.0
-- lmdb 0.87
-- Boost 1.59.0
-- Boost.NumPy ([26aaa5b](https://github.com/ndarray/Boost.NumPy/tree/26aaa5b62e6170f2ccde179b46f1a49c4011fc9d))
+It is recommended to install anaconda with python 3.6.5. Using `conda install`, install the following packages:
+  	- Chainer 1.5.0.2
+  	- Cython 0.28.2
+  	- NumPy 1.14.3
+  	- tqdm
+	- OpenCV 3.4.2
+	- lmdb 0.9.22
+	- Boost 1.67.0 (Boost.NumPy is no longer a separate package from Boost.)
 
-# Build Libraries
+Note that some of the packages are from the conda-forge repository, which might need to be added.
 
-## OpenCV 3.0.0
-
-```
-$ wget https://github.com/Itseez/opencv/archive/3.0.0.zip
-$ unzip 3.0.0.zip && rm -rf 3.0.0.zip
-$ cd opencv-3.0.0 && mkdir build && cd build
-$ bash $SSAI_HOME/shells/build_opencv.sh
-$ make -j32 install
-```
-
-If some libraries are missing, do below before compiling 3.0.0.
-
-```
-$ sudo apt-get install -y libopencv-dev libtbb-dev
-```
-
-## Boost 1.59\. 0
-
-```
-$ wget http://downloads.sourceforge.net/project/boost/boost/1.59.0/boost_1_59_0.tar.bz2
-$ tar xvf boost_1_59_0.tar.bz2 && rm -rf boost_1_59_0.tar.bz2
-$ cd boost_1_59_0
-$ ./bootstrap.sh
-$ ./b2 -j32 install cxxflags="-I/home/ubuntu/anaconda3/include/python3.5m"
-```
-
-## Boost.NumPy
-
-```
-$ git clone https://github.com/ndarray/Boost.NumPy.git
-$ cd Boost.NumPy && mkdir build && cd build
-$ cmake -DPYTHON_LIBRARY=$HOME/anaconda3/lib/libpython3.5m.so ../
-$ make install
-```
-
+# Set-up
 ## Build utils
 
 ```
@@ -56,7 +26,9 @@ $ cd $SSAI_HOME/scripts/utils
 $ bash build.sh
 ```
 
-# Create Dataset
+Be sure to edit the values in `build.sh` to your situation.
+
+## Create Dataset
 
 ```
 $ bash shells/download.sh
