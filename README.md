@@ -21,14 +21,15 @@ To install in one go, execute `bash shell/install_deps.sh`. Depending on your sy
 Note that some of the packages are from the conda-forge repository, which might need to be added.
 
 # Set-up
+## Configuration
+Check the files in the `config` folder, and change the options to your situation.
+
 ## Build utils
 
 ```
 $ cd $SSAI_HOME/scripts/utils
 $ bash build.sh
 ```
-
-Be sure to edit the values in `build.sh` to your situation.
 
 ## Create Dataset
 
