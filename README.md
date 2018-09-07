@@ -1,5 +1,5 @@
 This project was forked from [mitmul: ssai-cnn](https://github.com/mitmul/ssai-cnn).
-This is an implementation of [Volodymyr Mnih's dissertation](https://www.cs.toronto.edu/~vmnih/docs/Mnih_Volodymyr_PhD_Thesis.pdf) methods on his [Massachusetts road & building dataset](https://www.cs.toronto.edu/~vmnih/data/) and my original methods that are published in [this paper](http://www.ingentaconnect.com/content/ist/jist/2016/00000060/00000001/art00003).
+This is an implementation of [Volodymyr Mnih's dissertation](https://www.cs.toronto.edu/~vmnih/docs/Mnih_Volodymyr_PhD_Thesis.pdf) methods on his [Massachusetts road & building dataset](https://www.cs.toronto.edu/~vmnih/data/) and mitmul's methods that are published in [this paper](http://www.ingentaconnect.com/content/ist/jist/2016/00000060/00000001/art00003).
 
 # Differences
 
