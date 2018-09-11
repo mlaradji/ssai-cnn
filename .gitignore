@@ -29,3 +29,5 @@ results
 
 git_push.sh
 git_prep.sh
+
+nohup*

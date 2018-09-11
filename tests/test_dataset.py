@@ -42,8 +42,11 @@ if __name__ == '__main__':
         canvas = np.zeros((92, 92 * 2, 3))
         canvas[:, :92, :] = o_patch
         canvas[:, 92:, :] = o_patch
-        canvas[92 / 2 - 24 / 2:92 / 2 + 24 / 2,
-               92 + 92 / 2 - 24 / 2:92 + 92 / 2 + 24 / 2, :] = l_patch
+	
+	# int() was added to make the slice indices integer, in the following line.
+        canvas[int(92 / 2 - 24 / 2):int(92 / 2 + 24 / 2),
+               int(92 + 92 / 2 - 24 / 2):int(92 + 92 / 2 + 24 / 2), :] = l_patch
+
         canvas = canvas.astype(np.uint8)
 
         cv.imwrite('{}/{}.jpg'.format(args.out_dir, o_key), canvas)

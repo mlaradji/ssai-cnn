@@ -75,6 +75,13 @@ if __name__ == '__main__':
     for i, (o, l) in enumerate(zip(o_aug, l_aug)):
         o = o.transpose((1, 2, 0))
         o = o - o.min()
+
+        #nan_check = np.isfinite(o).all()
+        #if not nan_check: print('NaN value encountered.') # Culprit matrix is '+str(o)+' .')
+        
+        #all_zeros = not o.any()
+        #if all_zeros: print('An all zero matrix was encountered.') # Culprit matrix is '+str(o)+' .')
+        
         o = o / o.max()
         o *= 255
 
@@ -86,11 +93,14 @@ if __name__ == '__main__':
         canvas = np.zeros((args.ortho_side, args.ortho_side * 2, 3))
         canvas[:, :args.ortho_side, :] = o
         canvas[:, args.ortho_side:, :] = o
-        canvas[args.ortho_side / 2 - args.label_side / 2:
-               args.ortho_side / 2 + args.label_side / 2,
-               args.ortho_side + args.ortho_side / 2 - args.label_side / 2:
-               args.ortho_side + args.ortho_side / 2 + args.label_side / 2,
+        
+	# int()'s was added to the following line to make the slice indices integer. This has not been tested.
+        canvas[int(args.ortho_side / 2 - args.label_side / 2):
+               int(args.ortho_side / 2 + args.label_side / 2),
+               int(args.ortho_side + args.ortho_side / 2 - args.label_side / 2):
+               int(args.ortho_side + args.ortho_side / 2 + args.label_side / 2),
                :] = l
+
         canvas = canvas.astype(np.uint8)
 
         cv.imwrite('{}/{}.jpg'.format(args.out_dir, i), canvas)
